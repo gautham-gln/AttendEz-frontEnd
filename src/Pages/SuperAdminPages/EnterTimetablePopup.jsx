@@ -150,7 +150,14 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 
-const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+const days = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
 export default function EnterTimetablePopup({
   visible,

@@ -18,10 +18,10 @@ export default function EditLogicalGroupPopup({
   if (!visible) return null;
 
   const [advisorEmail, setAdvisorEmail] = React.useState(
-    groupData.advisorEmail || ""
+    groupData.advisorEmail || "",
   );
   const [registerNumbers, setRegisterNumbers] = React.useState(
-    groupData.registernumbers || []
+    groupData.registernumbers || [],
   );
   const classCodeOptions = groupData["class-code"] || [];
 
@@ -37,7 +37,7 @@ export default function EditLogicalGroupPopup({
 
   const handleTimetableChange = (index, field, value) => {
     setTimetable((prev) =>
-      prev.map((slot, i) => (i === index ? { ...slot, [field]: value } : slot))
+      prev.map((slot, i) => (i === index ? { ...slot, [field]: value } : slot)),
     );
   };
 
@@ -150,7 +150,7 @@ export default function EditLogicalGroupPopup({
                           handleTimetableChange(
                             idx,
                             "startTime",
-                            e.target.value
+                            e.target.value,
                           )
                         }
                         className="w-24"
@@ -173,6 +173,7 @@ export default function EditLogicalGroupPopup({
                             "Wednesday",
                             "Thursday",
                             "Friday",
+                            "Saturday",
                           ].map((d) => (
                             <SelectItem key={d} value={d}>
                               {d}
